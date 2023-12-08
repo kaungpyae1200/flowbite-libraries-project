@@ -15,6 +15,7 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
-    "flowbite": "^2.2.0"
+    "flowbite": "^2.2.0",
+    "typed.js": "^2.1.0"
   }
 }
