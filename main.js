@@ -1,5 +1,9 @@
 import Typed from 'typed.js';
-import './style.css'
+import './style.css';
+import AOS from 'aos';
+
+
+AOS.init();
 
 const typeUi = document.querySelector("#typeUi");
 const headerUi  = document.querySelector("#headerUi");
