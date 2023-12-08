@@ -1,7 +1,7 @@
 import Typed from 'typed.js';
 import './style.css';
 import AOS from 'aos';
-
+import WOW from "wow.js";
 
 AOS.init();
 
@@ -14,7 +14,12 @@ const headerUi  = document.querySelector("#headerUi");
 //     console.log(object);
 // }
 
+const wow = new WOW({
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animate__animated', 
+});
 
+wow.init()
 
 const header = new Typed(headerUi,{
     strings : ["<span class='text-primary-700'>We invest in the world’s potential</span> ","<span class='text-pink-700'>capital can unlock long-term value and drive economic growth</span> " ],
