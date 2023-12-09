@@ -10,7 +10,7 @@ AOS.init();
 new Glide('.glide',{
     type: 'carousel',
     startAt: 0,
-    perView: 3,
+    perView: 5,
     focusAt :'center',
     breakpoints : {
         400: {
