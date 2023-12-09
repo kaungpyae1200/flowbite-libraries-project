@@ -22,10 +22,51 @@ new Glide(".glide", {
   },
 }).mount();
 const typeUi = document.querySelector("#typeUi");
-const headerUi = document.querySelector("#headerUi");
+const navBarUi = document.querySelector("#navBarUi");
 const myChartUi = document.querySelector("#myChart");
-const wayJs = document.querySelector("#wayJs");
-const way =
+const myTest = document.querySelector("#myTest");
+const endPhoto = document.querySelector("#endPhoto");
+const myColor = document.querySelector("#myColor");
+
+
+
+
+
+const myTestWaypoint = new Waypoint(
+    {
+        element : myTest,
+        handler(direction){
+            // console.log("my test in viewpoint",direction);
+            if(direction === "down"){
+                adObj.classList.remove("translate-x-full");
+                myColor.classList.remove("bg-white");
+                myColor.classList.add("bg-sky-600","text-white");
+
+            }else{
+                adObj.classList.add("translate-x-full");
+                myColor.classList.remove("bg-white");
+                myColor.classList.add("bg-sky-600","text-white");
+
+            }
+        },
+        offset: "50%"
+    }
+);
+const endPhotoWaypoint = new Waypoint(
+    {
+        element : endPhoto,
+        handler(direction){
+            // console.log("my test in viewpoint",direction);
+            if(direction === "down"){
+                adObj.classList.add("translate-x-full");
+                myColor.classList.remove("bg-gray");
+                myColor.classList.add("bg-gray-600","text-white");
+
+            }
+        },
+        offset: "50%"
+    }
+)
 
 const chart = new Chart(myChartUi, {
   type: "line",
@@ -80,7 +121,7 @@ const wow = new WOW({
 
 wow.init();
 
-const header = new Typed(headerUi, {
+const navBar = new Typed(navBarUi, {
   strings: [
     "<span class='text-primary-700'>We invest in the world’s potential</span> ",
     "<span class='text-pink-700'>capital can unlock long-term value and drive economic growth</span> ",
